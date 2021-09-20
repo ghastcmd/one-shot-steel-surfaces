@@ -56,7 +56,7 @@ What is the context? Which Research Question is it tackling? What is the method?
   * O método utiliza um regularizador de balanceamento para desdobrar o espaço de recursos das classes one-shot e vetores de peso.
   * chegou a 99.63% de acurácia
 
-*  Image Quality Detection Using The Siamese Convolutional Neural Network
+* Image Quality Detection Using The Siamese Convolutional Neural Network
   * Detecção da qualidade de imagens
   * Apresentar uma abordagem para determinar a qualidade das imagens utilizando redes neurais artificiais.
   * Utilização de redes siamesas
@@ -74,7 +74,7 @@ What is the context? Which Research Question is it tackling? What is the method?
   * Transformar uma YOLO para que seja totalmente convolucional
   * 83 defeitos detectados por segundo, sendo melhor que algoritmos anteriores.
  
- * A Siamese Network Utilizing Image Structural Differences For Cross-Category Defect Detection
+* A Siamese Network Utilizing Image Structural Differences For Cross-Category Defect Detection
   * Treinamento de uma rede siamesa utilizando imagens de diferentes classes
   * Possibilidade de melhorar a acurácia de uma rede siamesa com a utilização de SSIM
   * Adicionar uma camada chamada SSIM-Layer para gerar features antes de utilizar a rede siamesa

@@ -44,6 +44,50 @@ What is the context? Which Research Question is it tackling? What is the method?
   * Utiliza-se imagens bastante grandes para o estudo, e várias imagens com defeitos e imagens sem defeitos, as redes conseguem segmentar as imagens, e delimitar a área com defeito, além de classificar qual o defeito
   * A acurácia da rede U-NET é menor que a da Deep Residual U-NET, com acurácias de 0,543 e 0,731 respectivamente, mas demonstrou que acurácia é limitada para a delimitação do local onde está o defeito, o que demonstra que é necessário mais estudos na área
 
+* One-shot cross-dataset palmprint recognition via adversarial domain adaptation
+  * Algoritmos de reconhecimento de impressão palmar baseados em aprendizado profundo
+  * Qual o desempenho um novo método de reconhecimento de impressão palmar de conjunto de dados cruzado utilizando poucas imagens para treino?
+  * Utiliza um modelo DHN baseado em MobileFaceNets.
+  * Os resultados mostraram que a abordagem pode superar modelos mais tradicionalmente utilizados na verificação e identificação de impressões palmares de conjuntos de dados cruzados.
+
+* Feature Learning for One-Shot Face Recognition
+  * Reconhecimento facial com one-shot
+  * Verificar a viabilidade de um novo framework baseado em CNN para reconhecimento facial
+  * O método utiliza um regularizador de balanceamento para desdobrar o espaço de recursos das classes one-shot e vetores de peso.
+  * chegou a 99.63% de acurácia
+
+*  Image Quality Detection Using The Siamese Convolutional Neural Network
+  * Detecção da qualidade de imagens
+  * Apresentar uma abordagem para determinar a qualidade das imagens utilizando redes neurais artificiais.
+  * Utilização de redes siamesas
+  * O sistema atingiu precisão de 81% na classificação de qualidade geral da imagem.
+
+* Adaptation-Oriented Feature Projection for One-Shot Action Recognition
+  * Classificação de uma ação usando one-shot
+  * Verificar se era possível resolver o problema utilizando AOF
+  * Pré-trinar uma rede base
+  * Os resultados mostraram que é possível superar os modelos atuais.
+
+* Real-time Detection of Steel Strip Surface Defects Based on Improved YOLO Detection Network
+  * Detecção de defeitos em superfícies metálicas
+  * A possibilidade de um modelo mais rápidos que os atuais para classificação real-time de defeitos em superfícies metálicas.
+  * Transformar uma YOLO para que seja totalmente convolucional
+  * 83 defeitos detectados por segundo, sendo melhor que algoritmos anteriores.
+ 
+ * A Siamese Network Utilizing Image Structural Differences For Cross-Category Defect Detection
+  * Treinamento de uma rede siamesa utilizando imagens de diferentes classes
+  * Possibilidade de melhorar a acurácia de uma rede siamesa com a utilização de SSIM
+  * Adicionar uma camada chamada SSIM-Layer para gerar features antes de utilizar a rede siamesa
+  * Melhor desempenho para imagens de categorias diferentes
+
+* The Performance Analysis of Transfer Learning for Steel Defect Detection by Using Deep Learning
+  * Detecção de defeitos em superfícies metálicas usando redes neurais
+  * Possibilidade de melhoria do desempenho na detecção de defeitos em superfícieis metálicas
+  * Comparar diferentes métodos utilizados nesse tipo de problema
+  * MobileNet chegou a mais de 96% quando treinada utilizando os dados de NEU.
+
+
+
 
 # Resumos dos artigos
 
@@ -92,3 +136,46 @@ O artigo é um documento introdutório à redes neurais convolucionais e explica
 O paper pretende resolver o problema de detecção de falhas em folhas de metal, além de localizar e classificar as falhas do metal, diferentemente do nosso artigo que pretende classificar as falhas encontradas somente; utiliza-se a rede U-NET e Deep Residual U-NET para resolver o problema. Os datasets utilizados para treino são 12568 imagens para treino e 1801 imagens para teste, e de todas as imagens para treino, 5902 são imagens com defeito e 6666 imagens não tem defeitos; são imagens grandes, com dimensões de 1600x256. As arquiteturas selecionadas conseguem segmentar a imagem e delimitar aproximadamente os locais em que existe defeito, e classifica qual tipo de defeito está presente na área delimitada. Os resultados são bem diferenciados com uma acurácia DICE de 0,543 para as redes neurais utilizando a arquitetura U-NET e uma acurácia de 0,731 para a arquitetura Deep Residual U-NET.
 
 [Link do issue](https://github.com/ghastcmd/one-shot-steel-surfaces/issues/11)
+
+# 8. One-shot cross-dataset palmprint recognition via adversarial domain adaptation
+
+O artigo propõe uma nova abordagem para o reconhecimento da impressão palmar crossdataset one-shot com base na adversarial domain adaptation. Em primeiro lugar, um modelo DHN baseado em MobileFaceNets é treinado usando as amostras rotuladas no conjunto de dados de origem. Em seguida, com base nas amostras no conjunto de dados de origem e muito poucas amostras alvo rotuladas (tão baixo quanto uma amostra por categoria), DHN alvo e um discriminador são introduzidos e treinados alternadamente. Foram realizados vários experimentos de benchmark, incluindo vários bancos de dados, onde foi demonstrado que essa abordagem pode superar modelos mais tradicionalmente utilizados na verificação e identificação de impressões palmares de conjuntos de dados cruzados.
+
+[Link do issue](https://github.com/ghastcmd/one-shot-steel-surfaces/issues/2)
+
+# 9. Feature Learning for One-Shot Face Recognition
+
+Neste artigo, os autores propõem um novo framework baseado em CNN de regularizador de balanceamento e regeneração de centro de deslocamento que regula as normas do vetor de peso na mesma escala e ajusta o centro de agrupamento para lidar com dados de treinamento deficientes. Avaliações abrangentes no conjunto de dados de face de low shot MS-celeb-1M demonstram que os métodos apresentados melhoram o reconhecimento de um rosto usando one shot notavelmente e que alcançam cobertura de 88,78% com precisão de 0,99 usando dados restritos sem classificadores híbridos ou multi-modelo.
+Além disso, o modelo CNN treinado com os métodos propostos pode obter representações de características mais discriminativas e compactas.
+
+[Link do issue](https://github.com/ghastcmd/one-shot-steel-surfaces/issues/6)
+
+# 10. Image Quality Detection Using The Siamese Convolutional Neural Network
+
+O objetivo deste artigo foi propor uma rede convolucional capaz de decidir qual imagem de um par de imagens é de maior qualidade. Os resultados confirmam que é possível criar um sistema capaz de realizar tal tarefa. No artigo foi utilizado rede neural siamesa. Por ter sido possível coletar avaliações não apenas da qualidade geral dos pares comparados, mas também de outras cinco categorias, o sistema também pode ser treinado nas demais categorias. O sistema obteve bons resultados, como por exemplo, no que diz respeito à qualidade geral, o sistema, no qual foi aplicado o primeiro aumento, atingiu uma precisão de quase 81%.
+
+[Link do issue](https://github.com/ghastcmd/one-shot-steel-surfaces/issues/7)
+
+# 11. Adaptation-Oriented Feature Projection for One-Shot Action Recognition
+
+Neste artigo,os autores propuseram um novo método, AOF, para integrar as informações de adaptação em classes vistas usando uma matriz de projeção, com uma complexidade computacional viável. Pode-se alcançar um bom desempenho ao treinar essa projeção ao restringir conjuntamente a perda de pré-adaptação e pós-adaptação. Sob essa projeção, tanto o recurso quanto a adaptação são aprimorados pela fusão das dimensões de recursos importantes que são sensíveis à adaptação. Resultados experimentais em dois conjuntos de dados desafiadores de reconhecimento de ação única, ou seja, UCF11 e HMDB51, demonstram que AOF pode superar os métodos de última geração.
+
+[Link do issue](https://github.com/ghastcmd/one-shot-steel-surfaces/issues/8)
+
+# 12. Real-time Detection of Steel Strip Surface Defects Based on Improved YOLO Detection Network
+
+O artigo propôs o melhoramento da rede You Only Look Once (YOLO) fazendo com que seja toda convolucional, com 27 camadas de convolução. A rede melhorada foi treinada por 50,000 iterações em 6 tipos de defeitos registrados nas imagens. Os testes mostraram que a rede atinge 99% de taxa de detecção de defeitos quando não é necessário fazer a classificação do defeito e que o tempo médio de inferência para a rede detectar uma superfície é de apenas 0.012s, ou seja, 83 defeitos detectados por segundo o que é 10 vezes mais rápido que trabalhos anteriores.
+
+[Link do issue](https://github.com/ghastcmd/one-shot-steel-surfaces/issues/12)
+
+# 13. A Siamese Network Utilizing Image Structural Differences For Cross-Category Defect Detection
+
+Neste trabalho, redes neurais de duas camadas são propostas para detecção de defeitos de categoria cruzada sem retreinamento. Diferente das redes neurais tradicionais, o método proposto aprende diferenças de pares de imagens contendo certa similaridade estrutural ao invés de uma única imagem. A proposta é que seja uma rede SSIM-SNN (junção de Similarity Structure Index e Siamese Neural Network), onde na primeira camada seja uma SSIM-Layer que gera features simulando os componentes SSIM, e a segunda camada seja uma SNN. Nesta camada, a SNN produz um rótulo para indicar a imperfeição da imagem de entrada. Nos testes realizados, a SNN e uma SSIM-SNN tiveram desempenho similar para imagens de mesma categoria, com a SSIM-SNN tendo desempenho melhor para imagens de categorias diferentes.
+
+[Link do issue](https://github.com/ghastcmd/one-shot-steel-surfaces/issues/13)
+
+# 14. The Performance Analysis of Transfer Learning for Steel Defect Detection by Using Deep Learning
+
+O trabalho tinha como objetivo desenvolver modelos de aprendizado profundo que pudessem realizar a detecção de defeitos no aço e avaliar o potencial do aprendizado de transferência para essa tarefa. Neste artigo, quatro tipos de métodos de aprendizagem por transferência: ResNet, VGG, MobileNet e DenseNet foram avaliados experimentalmente para desenvolver modelos para detecção de defeitos em superfícies de aço. Os modelos foram desenvolvidos para classificação binária (defeito e sem defeito) utilizando o conjunto de dados SEVERSTAL que contém 12.568 imagens da superfície do aço. Em seguida, esses modelos também foram avaliados para classificação multiclasse usando o conjunto de dados NEU com 1.800 imagens. Os resultados experimentais mostraram que o modelo desenvolvido usando o método MobileNet tem a maior taxa de detecção com 80,41% para o conjunto de dados SEVERSTAL e 96,94% para o conjunto de dados NEU.
+
+[Link do issue](https://github.com/ghastcmd/one-shot-steel-surfaces/issues/14)
